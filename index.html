@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altis Tech Hub Digital - Bientôt disponible</title>
+    <!-- Intégration de polices modernes Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.2);
+            --accent: #06b6d4;
+            --card-bg: rgba(22, 28, 45, 0.6);
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Effets de lumière en arrière-plan (Style Tech) */
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--primary);
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+        body::before { top: 10%; left: 10%; background: var(--accent); }
+        body::after { bottom: 10%; right: 10%; }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-name {
+            color: var(--accent);
+            display: block;
+            margin-top: 8px;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        /* Formulaire d'inscription à la newsletter */
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 480px) {
+            .subscribe-form {
+                flex-direction: row;
+                background: rgba(255, 255, 255, 0.03);
+                padding: 6px;
+                border-radius: 14px;
+                border: 1px solid var(--border-color);
+            }
+            .subscribe-form:focus-within {
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px var(--primary-glow);
+            }
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        @media (min-width: 480px) {
+            input[type="email"] {
+                background: transparent;
+                border: none;
+            }
+        }
+
+        button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Pied de page et Réseaux Sociaux */
+        .footer {
+            margin-top: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .social-icon {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .social-icon:hover {
+            color: var(--accent);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Badge d'état -->
+        <span class="badge">Site en construction</span>
+        
+        <!-- Titres -->
+        <h1>Création en cours de votre espace digital</h1>
+        <span class="brand-name">Altis Tech Hub Digital</span>
+        
+        <!-- Message descriptif -->
+        <p>Nous préparons une plateforme technologique innovante pour propulser vos projets numériques. Restez connectés, le lancement est imminent.</p>
+        
+        <!-- Formulaire d'attente (Prêt pour être connecté à votre système de newsletter) -->
+        <form class="subscribe-form" action="#" method="POST" onsubmit="alert('Merci ! Votre inscription a bien été prise en compte.'); return false;">
+            <input type="email" placeholder="Votre adresse e-mail" required aria-label="Adresse e-mail">
+            <button type="submit">Être notifié</button>
+        </form>
+
+        <!-- Liens et pied de page -->
+        <div class="footer">
+            <div class="social-links">
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter / X</a>
+                <a href="mailto:contact@altistechhub.digital" class="social-icon">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Altis Tech Hub Digital. Tous droits réservés.</p>
+        </div>
+    </div>
+
+</body>
+</html>
