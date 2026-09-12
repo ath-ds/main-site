@@ -1,242 +1,414 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altis Tech Hub Digital - Bientôt disponible</title>
-    <!-- Intégration de polices modernes Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --text-color: #f3f4f6;
-            --text-muted: #9ca3af;
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.2);
-            --accent: #06b6d4;
-            --card-bg: rgba(22, 28, 45, 0.6);
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            position: relative;
-            padding: 20px;
-        }
-
-        /* Effets de lumière en arrière-plan (Style Tech) */
-        body::before, body::after {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: var(--primary);
-            filter: blur(120px);
-            opacity: 0.15;
-            z-index: -1;
-        }
-        body::before { top: 10%; left: 10%; background: var(--accent); }
-        body::after { bottom: 10%; right: 10%; }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            background: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #a5b4fc;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .brand-name {
-            color: var(--accent);
-            display: block;
-            margin-top: 8px;
-            font-size: 1.8rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        /* Formulaire d'inscription à la newsletter */
-        .subscribe-form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            width: 100%;
-            margin-bottom: 32px;
-        }
-
-        @media (min-width: 480px) {
-            .subscribe-form {
-                flex-direction: row;
-                background: rgba(255, 255, 255, 0.03);
-                padding: 6px;
-                border-radius: 14px;
-                border: 1px solid var(--border-color);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altis Tech Hub Digital Solutions FZE LLC | Secure your digital assets. Automate your growth.</title>
+  <meta name="description" content="Enterprise digital transformation, custom software, API integrations, data engineering, AI/ML, and intelligent RPA in the UAE & GCC region." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a0f1d',
+              card: '#111827',
+              accent: '#3b82f6',
+              glow: '#06b6d4',
+              text: '#f3f4f6'
             }
-            .subscribe-form:focus-within {
-                border-color: var(--primary);
-                box-shadow: 0 0 0 3px var(--primary-glow);
-            }
+          }
         }
-
-        input[type="email"] {
-            flex: 1;
-            padding: 14px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: white;
-            font-family: inherit;
-            font-size: 0.95rem;
-            outline: none;
-            transition: all 0.2s;
-        }
-
-        @media (min-width: 480px) {
-            input[type="email"] {
-                background: transparent;
-                border: none;
-            }
-        }
-
-        button {
-            padding: 14px 24px;
-            background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-        }
-
-        button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        /* Pied de page et Réseaux Sociaux */
-        .footer {
-            margin-top: 16px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .social-icon {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-            padding: 8px 12px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-        }
-
-        .social-icon:hover {
-            color: var(--accent);
-            border-color: rgba(6, 182, 212, 0.3);
-        }
-
-        .copyright {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.3);
-        }
-    </style>
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
-    <div class="container">
-        <!-- Badge d'état -->
-        <span class="badge">Site en construction</span>
-        
-        <!-- Titres -->
-        <h1>Création en cours de votre espace digital</h1>
-        <span class="brand-name">Altis Tech Hub Digital</span>
-        
-        <!-- Message descriptif -->
-        <p>Nous préparons une plateforme technologique innovante pour propulser vos projets numériques. Restez connectés, le lancement est imminent.</p>
-        
-        <!-- Formulaire d'attente (Prêt pour être connecté à votre système de newsletter) -->
-        <form class="subscribe-form" action="#" method="POST" onsubmit="alert('Merci ! Votre inscription a bien été prise en compte.'); return false;">
-            <input type="email" placeholder="Votre adresse e-mail" required aria-label="Adresse e-mail">
-            <button type="submit">Être notifié</button>
-        </form>
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="Altis Tech Hub Logo" class="h-10 w-auto rounded object-contain" />
+        <span class="font-bold text-white text-lg tracking-wider hidden sm:inline">ALTIS TECH HUB</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a>
+        <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+        <a href="#industries" class="hover:text-cyan-400 transition-colors">Industries</a>
+        <a href="#compliance" class="hover:text-cyan-400 transition-colors">Compliance</a>
+      </nav>
 
-        <!-- Liens et pied de page -->
-        <div class="footer">
-            <div class="social-links">
-                <a href="#" class="social-icon">LinkedIn</a>
-                <a href="#" class="social-icon">Twitter / X</a>
-                <a href="mailto:contact@altistechhub.digital" class="social-icon">Contact</a>
-            </div>
-            <p class="copyright">&copy; 2026 Altis Tech Hub Digital. Tous droits réservés.</p>
-        </div>
+      <a href="#contact" class="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-500/20 transition-all">
+        Contact Us
+      </a>
     </div>
+  </header>
 
+  <!-- HERO SECTION -->
+  <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-semibold tracking-wide uppercase mb-6">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          Next-Gen Digital & AI Solutions | UAE & GCC
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          Secure your digital assets. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Automate your growth.</span>
+        </h1>
+        <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+          Altis Tech Hub Digital Solutions FZE LLC delivers high-performance enterprise software, robust API ecosystems, and intelligent AI workflows designed to scale modern businesses across the UAE and broader GCC region.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-blue-600/30 transition-all">
+            Get in Touch
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-lg transition-all">
+            Explore Pillars
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="py-20 bg-slate-950/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">About Altis Tech Hub</h2>
+          <h3 class="text-3xl font-bold text-white mb-6">Engineering Modern Business Transformation</h3>
+          <p class="text-slate-400 mb-4 leading-relaxed">
+            Headquartered in Sharjah, UAE, <strong>Altis Tech Hub Digital Solutions FZE LLC</strong> serves as a high-value strategic technology partner for enterprises, B2B corporations, and fast-growing B2C entities.
+          </p>
+          <p class="text-slate-400 mb-6 leading-relaxed">
+            We bridge the gap between complex software engineering and strategic AI automation. Whether modernization requires connecting legacy architectures via microservice APIs or deploying intelligent autonomous agents, we build secure, scalable foundation systems tailored to regional compliance standards.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800">
+              <div class="text-2xl font-bold text-white mb-1">2 Pillars</div>
+              <div class="text-xs text-slate-400">Digital Services & Smart Automation</div>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800">
+              <div class="text-2xl font-bold text-white mb-1">100% GCC</div>
+              <div class="text-xs text-slate-400">Compliant with UAE Federal Laws</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature Box -->
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-2xl border border-slate-800 relative">
+          <div class="absolute -top-3 -right-3 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none"></div>
+          <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <i data-lucide="cpu" class="text-cyan-400"></i> Core Technology Philosophy
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span><strong>End-to-End Security:</strong> Protecting high-value digital assets with robust architectural design.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span><strong>Data Precision:</strong> Transforming unstructured enterprise data into real-time executive intelligence.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span><strong>Operational Excellence:</strong> Eliminating manual friction via Robotic Process Automation (RPA) and GenAI workflows.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Our Capabilities</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Two Pillars of Modern Transformation</h3>
+      </div>
+
+      <!-- Pillar 1 -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+          <div class="p-2 rounded-lg bg-blue-900/30 text-blue-400">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-2xl font-bold text-white">Pillar 1: Digital Services</h4>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="code" class="w-8 h-8 text-cyan-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">Custom Software Development</h5>
+            <p class="text-sm text-slate-400">End-to-end design and engineering of tailored enterprise software, SaaS products, and custom operational tools.</p>
+          </div>
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="smartphone" class="w-8 h-8 text-cyan-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">Web & Mobile Applications</h5>
+            <p class="text-sm text-slate-400">Full-stack development of cross-platform applications alongside responsive, high-performance web platforms.</p>
+          </div>
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="workflow" class="w-8 h-8 text-cyan-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">API Development & Integration</h5>
+            <p class="text-sm text-slate-400">Connecting legacy software with modern applications to ensure seamless, secure data flow across multi-cloud ecosystems.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div>
+        <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+          <div class="p-2 rounded-lg bg-cyan-900/30 text-cyan-400">
+            <i data-lucide="bot" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-2xl font-bold text-white">Pillar 2: Smart Automation</h4>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="bar-chart-3" class="w-8 h-8 text-blue-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">Data Engineering & BI</h5>
+            <p class="text-sm text-slate-400">Robust data pipelines converting raw, messy enterprise data into interactive, real-time executive decision dashboards.</p>
+          </div>
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="sparkles" class="w-8 h-8 text-blue-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">AI & Machine Learning</h5>
+            <p class="text-sm text-slate-400">Generative AI enterprise search, secure internal knowledge bots, sales forecasting, and sentiment Analysis NLP engines.</p>
+          </div>
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="cog" class="w-8 h-8 text-blue-400 mb-4"></i>
+            <h5 class="text-xl font-bold text-white mb-2">Intelligent Automation (RPA)</h5>
+            <p class="text-sm text-slate-400">Deploying software bots to handle repetitive rules-based tasks, automated invoicing, manual entry elimination, and zero-error workflows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET INDUSTRIES -->
+  <section id="industries" class="py-20 bg-slate-950/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Industry Focus</h2>
+        <h3 class="text-3xl font-bold text-white">Tailored Solutions for Core UAE Sectors</h3>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800 flex items-center justify-center text-blue-400 mb-6">
+            <i data-lucide="building-2" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Real Estate</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Automating high-volume transactions, tenant workflows, and enabling data-driven property investment and valuation platforms.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 mb-6">
+            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">E-Commerce & Retail</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Delivering hyper-personalized user experiences, omnichannel inventory precision, and AI-driven customer retention models.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-indigo-950 border border-indigo-800 flex items-center justify-center text-indigo-400 mb-6">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Logistics & Supply Chain</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Optimizing multi-warehouse inventory levels and implementing end-to-end real-time tracking visibility across regional supply chains.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGULATORY & LEGAL COMPLIANCE -->
+  <section id="compliance" class="py-16 bg-slate-900/30 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="scale" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Regulatory & Legal Compliance Framework</h3>
+        </div>
+        <p class="text-sm text-slate-400 mb-6">
+          Our digital platforms, enterprise data architectures, and commercial practices fully comply with the core legal frameworks of the United Arab Emirates:
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300">
+          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span><strong>UAE PDPL:</strong> Federal Decree-Law No. 45 of 2021</span>
+          </div>
+          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span><strong>Modern Tech Trading:</strong> Federal Decree-Law No. 14 of 2023</span>
+          </div>
+          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span><strong>Consumer Protection:</strong> Federal Law No. 15 of 2020</span>
+          </div>
+          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span><strong>Trust Services:</strong> Electronic Transactions Law</span>
+          </div>
+          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span><strong>Cybercrimes Law:</strong> Federal Decree-Law No. 34 of 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        
+        <div>
+          <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Connect With Us</h2>
+          <h3 class="text-3xl font-bold text-white mb-6">Let's Discuss Your Digital Ecosystem</h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            Send us an inquiry regarding your custom software needs, automated workflow projects, or strategic AI integration inquiries.
+          </p>
+
+          <div class="space-y-6 text-sm text-slate-300">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Email Us</div>
+                <a href="mailto:contact@altisdigital.ae" class="text-cyan-400 hover:underline">contact@altisdigital.ae</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Call Us</div>
+                <a href="tel:+971545140395" class="text-slate-300 hover:text-white">+971 54 514 0395</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Registered Address</div>
+                <div class="text-slate-400">Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+          <form onsubmit="event.preventDefault(); alert('Thank you for your message. Our technical team will get back to you shortly.');" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Full Name</label>
+              <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="John Doe" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address</label>
+              <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="name@company.com" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Service Focus</label>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-cyan-500 transition-colors">
+                <option>Custom Software / Web & Mobile</option>
+                <option>API Development & Integration</option>
+                <option>Data Engineering & BI</option>
+                <option>AI & Machine Learning Integrations</option>
+                <option>Intelligent Automation (RPA)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Message / Requirement</label>
+              <textarea rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Tell us about your project or technical requirements..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3.5 rounded-lg transition-all shadow-lg shadow-cyan-500/20">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-12 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="logo.jpg" alt="Altis Tech Hub Logo" class="h-8 w-auto rounded object-contain" />
+            <span class="font-bold text-white text-sm">ALTIS TECH HUB</span>
+          </div>
+          <p class="text-slate-500 leading-relaxed">
+            Secure your digital assets. Automate your growth.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="text-white font-semibold mb-3">Corporate Identification</h5>
+          <p class="mb-1"><strong class="text-slate-300">Official Registered Name:</strong></p>
+          <p class="mb-3">Altis Tech Hub Digital Solutions FZE LLC</p>
+          <p class="mb-1"><strong class="text-slate-300">Licensing Authority:</strong></p>
+          <p>SPC Free Zone</p>
+        </div>
+
+        <div>
+          <h5 class="text-white font-semibold mb-3">Legal & Tax</h5>
+          <p class="mb-1"><strong class="text-slate-300">VAT TRN:</strong></p>
+          <p class="mb-3 font-mono">105318634000001</p>
+          <p class="mb-1"><strong class="text-slate-300">Primary Region:</strong></p>
+          <p>UAE & GCC Region</p>
+        </div>
+
+        <div>
+          <h5 class="text-white font-semibold mb-3">Registered Office</h5>
+          <p class="leading-relaxed">
+            Business Centre, Sharjah Publishing City Free Zone, Sharjah, United Arab Emirates
+          </p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
+        <div>
+          © 2026 Altis Tech Hub Digital Solutions FZE LLC. All Rights Reserved.
+        </div>
+        <div class="flex gap-6">
+          <a href="#compliance" class="hover:text-slate-400">Legal Framework</a>
+          <a href="#contact" class="hover:text-slate-400">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+  </script>
 </body>
 </html>
