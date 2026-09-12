@@ -14,11 +14,15 @@
         extend: {
           colors: {
             brand: {
-              dark: '#0a0f1d',
-              card: '#111827',
-              accent: '#3b82f6',
-              glow: '#06b6d4',
-              text: '#f3f4f6'
+              bg: '#f8fafc',        <!-- Slate-50 off-white -->
+              card: '#ffffff',      <!-- Pure White -->
+              blue: '#0284c7',      <!-- Clear Blue (Sky-600) -->
+              blueDark: '#0369a1',  <!-- Dark Clear Blue -->
+              blueLight: '#e0f2fe', <!-- Light Blue Tint -->
+              gold: '#d97706',      <!-- Amber Gold -->
+              goldLight: '#fef3c7', <!-- Light Gold Tint -->
+              text: '#0f172a',      <!-- Dark Slate Text -->
+              muted: '#475569'      <!-- Slate Muted Text -->
             }
           }
         }
@@ -28,51 +32,50 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+<body class="bg-brand-bg text-brand-text font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
 
   <!-- NAVIGATION -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-slate-800">
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
         <img src="logo.jpg" alt="Altis Tech Hub Logo" class="h-10 w-auto rounded object-contain" />
-        <span class="font-bold text-white text-lg tracking-wider hidden sm:inline">ALTIS TECH HUB</span>
+        <span class="font-bold text-slate-900 text-lg tracking-wider hidden sm:inline">ALTIS TECH HUB</span>
       </a>
       
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a>
-        <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
-        <a href="#industries" class="hover:text-cyan-400 transition-colors">Industries</a>
-        <a href="#compliance" class="hover:text-cyan-400 transition-colors">Compliance</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#about" class="hover:text-brand-blue transition-colors">About Us</a>
+        <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
+        <a href="#industries" class="hover:text-brand-blue transition-colors">Industries</a>
+        <a href="#compliance" class="hover:text-brand-blue transition-colors">Compliance</a>
       </nav>
 
-      <a href="#contact" class="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-500/20 transition-all">
+      <a href="#contact" class="bg-gradient-to-r from-sky-600 to-amber-600 hover:from-sky-700 hover:to-amber-700 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-md shadow-sky-600/10 transition-all">
         Contact Us
       </a>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+  <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-sky-50/50 via-white to-brand-bg">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-semibold tracking-wide uppercase mb-6">
-          <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold tracking-wide uppercase mb-6">
+          <i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i>
           Next-Gen Digital & AI Solutions | UAE & GCC
         </div>
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-          Secure your digital assets. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Automate your growth.</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+          Secure your digital assets. <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-blue-600 to-amber-600">Automate your growth.</span>
         </h1>
-        <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
           Altis Tech Hub Digital Solutions FZE LLC delivers high-performance enterprise software, robust API ecosystems, and intelligent AI workflows designed to scale modern businesses across the UAE and broader GCC region.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-blue-600/30 transition-all">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold px-6 py-3.5 rounded-lg shadow-md shadow-sky-600/20 transition-all">
             Get in Touch
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="#services" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-lg transition-all">
-            Explore Pillars
+          <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold px-6 py-3.5 rounded-lg transition-all shadow-sm">
+            Explore Services
           </a>
         </div>
       </div>
@@ -80,47 +83,46 @@
   </section>
 
   <!-- ABOUT US SECTION -->
-  <section id="about" class="py-20 bg-slate-950/50 border-y border-slate-800">
+  <section id="about" class="py-20 bg-white border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">About Altis Tech Hub</h2>
-          <h3 class="text-3xl font-bold text-white mb-6">Engineering Modern Business Transformation</h3>
-          <p class="text-slate-400 mb-4 leading-relaxed">
+          <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">About Altis Tech Hub</h2>
+          <h3 class="text-3xl font-bold text-slate-900 mb-6">Engineering Modern Business Transformation</h3>
+          <p class="text-slate-600 mb-4 leading-relaxed">
             Headquartered in Sharjah, UAE, <strong>Altis Tech Hub Digital Solutions FZE LLC</strong> serves as a high-value strategic technology partner for enterprises, B2B corporations, and fast-growing B2C entities.
           </p>
-          <p class="text-slate-400 mb-6 leading-relaxed">
+          <p class="text-slate-600 mb-6 leading-relaxed">
             We bridge the gap between complex software engineering and strategic AI automation. Whether modernization requires connecting legacy architectures via microservice APIs or deploying intelligent autonomous agents, we build secure, scalable foundation systems tailored to regional compliance standards.
           </p>
           <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800">
-              <div class="text-2xl font-bold text-white mb-1">2 Pillars</div>
-              <div class="text-xs text-slate-400">Digital Services & Smart Automation</div>
+            <div class="p-4 rounded-xl bg-sky-50/60 border border-sky-100">
+              <div class="text-xl font-bold text-brand-blue mb-1">Modern Tech</div>
+              <div class="text-xs text-slate-600">Digital Services & Smart Automation</div>
             </div>
-            <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800">
-              <div class="text-2xl font-bold text-white mb-1">100% GCC</div>
-              <div class="text-xs text-slate-400">Compliant with UAE Federal Laws</div>
+            <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-100">
+              <div class="text-xl font-bold text-amber-700 mb-1">100% GCC</div>
+              <div class="text-xs text-slate-600">Compliant with UAE Federal Laws</div>
             </div>
           </div>
         </div>
         
         <!-- Feature Box -->
-        <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-2xl border border-slate-800 relative">
-          <div class="absolute -top-3 -right-3 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none"></div>
-          <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <i data-lucide="cpu" class="text-cyan-400"></i> Core Technology Philosophy
+        <div class="bg-gradient-to-br from-slate-50 to-sky-50/30 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+          <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i data-lucide="cpu" class="text-brand-blue"></i> Core Technology Philosophy
           </h4>
-          <ul class="space-y-4 text-sm text-slate-300">
+          <ul class="space-y-4 text-sm text-slate-700">
             <li class="flex items-start gap-3">
-              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
               <span><strong>End-to-End Security:</strong> Protecting high-value digital assets with robust architectural design.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
               <span><strong>Data Precision:</strong> Transforming unstructured enterprise data into real-time executive intelligence.</span>
             </li>
             <li class="flex items-start gap-3">
-              <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
               <span><strong>Operational Excellence:</strong> Eliminating manual friction via Robotic Process Automation (RPA) and GenAI workflows.</span>
             </li>
           </ul>
@@ -130,65 +132,65 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="py-20">
+  <section id="services" class="py-20 bg-brand-bg">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Our Capabilities</h2>
-        <h3 class="text-3xl sm:text-4xl font-bold text-white">Two Pillars of Modern Transformation</h3>
+        <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Our Capabilities</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-slate-900">Digital Services & Smart Automation</h3>
       </div>
 
-      <!-- Pillar 1 -->
+      <!-- Digital Services -->
       <div class="mb-16">
-        <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
-          <div class="p-2 rounded-lg bg-blue-900/30 text-blue-400">
+        <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+          <div class="p-2.5 rounded-xl bg-sky-100 text-brand-blue">
             <i data-lucide="layers" class="w-6 h-6"></i>
           </div>
-          <h4 class="text-2xl font-bold text-white">Pillar 1: Digital Services</h4>
+          <h4 class="text-2xl font-bold text-slate-900">Digital Services</h4>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="code" class="w-8 h-8 text-cyan-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">Custom Software Development</h5>
-            <p class="text-sm text-slate-400">End-to-end design and engineering of tailored enterprise software, SaaS products, and custom operational tools.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all">
+            <i data-lucide="code" class="w-8 h-8 text-brand-blue mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">Custom Software Development</h5>
+            <p class="text-sm text-slate-600">End-to-end design and engineering of tailored enterprise software, SaaS products, and custom operational tools.</p>
           </div>
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="smartphone" class="w-8 h-8 text-cyan-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">Web & Mobile Applications</h5>
-            <p class="text-sm text-slate-400">Full-stack development of cross-platform applications alongside responsive, high-performance web platforms.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all">
+            <i data-lucide="smartphone" class="w-8 h-8 text-brand-blue mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">Web & Mobile Applications</h5>
+            <p class="text-sm text-slate-600">Full-stack development of cross-platform applications alongside responsive, high-performance web platforms.</p>
           </div>
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="workflow" class="w-8 h-8 text-cyan-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">API Development & Integration</h5>
-            <p class="text-sm text-slate-400">Connecting legacy software with modern applications to ensure seamless, secure data flow across multi-cloud ecosystems.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all">
+            <i data-lucide="workflow" class="w-8 h-8 text-brand-blue mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">API Development & Integration</h5>
+            <p class="text-sm text-slate-600">Connecting legacy software with modern applications to ensure seamless, secure data flow across multi-cloud ecosystems.</p>
           </div>
         </div>
       </div>
 
-      <!-- Pillar 2 -->
+      <!-- Smart Automation -->
       <div>
-        <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
-          <div class="p-2 rounded-lg bg-cyan-900/30 text-cyan-400">
+        <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+          <div class="p-2.5 rounded-xl bg-amber-100 text-amber-700">
             <i data-lucide="bot" class="w-6 h-6"></i>
           </div>
-          <h4 class="text-2xl font-bold text-white">Pillar 2: Smart Automation</h4>
+          <h4 class="text-2xl font-bold text-slate-900">Smart Automation</h4>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="bar-chart-3" class="w-8 h-8 text-blue-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">Data Engineering & BI</h5>
-            <p class="text-sm text-slate-400">Robust data pipelines converting raw, messy enterprise data into interactive, real-time executive decision dashboards.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
+            <i data-lucide="bar-chart-3" class="w-8 h-8 text-amber-600 mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">Data Engineering & BI</h5>
+            <p class="text-sm text-slate-600">Robust data pipelines converting raw, messy enterprise data into interactive, real-time executive decision dashboards.</p>
           </div>
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="sparkles" class="w-8 h-8 text-blue-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">AI & Machine Learning</h5>
-            <p class="text-sm text-slate-400">Generative AI enterprise search, secure internal knowledge bots, sales forecasting, and sentiment Analysis NLP engines.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
+            <i data-lucide="sparkles" class="w-8 h-8 text-amber-600 mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">AI & Machine Learning</h5>
+            <p class="text-sm text-slate-600">Generative AI enterprise search, secure internal knowledge bots, sales forecasting, and sentiment analysis NLP engines.</p>
           </div>
-          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-            <i data-lucide="cog" class="w-8 h-8 text-blue-400 mb-4"></i>
-            <h5 class="text-xl font-bold text-white mb-2">Intelligent Automation (RPA)</h5>
-            <p class="text-sm text-slate-400">Deploying software bots to handle repetitive rules-based tasks, automated invoicing, manual entry elimination, and zero-error workflows.</p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
+            <i data-lucide="cog" class="w-8 h-8 text-amber-600 mb-4"></i>
+            <h5 class="text-xl font-bold text-slate-900 mb-2">Intelligent Automation (RPA)</h5>
+            <p class="text-sm text-slate-600">Deploying software bots to handle repetitive rules-based tasks, automated invoicing, manual entry elimination, and zero-error workflows.</p>
           </div>
         </div>
       </div>
@@ -196,40 +198,40 @@
   </section>
 
   <!-- TARGET INDUSTRIES -->
-  <section id="industries" class="py-20 bg-slate-950/50 border-t border-slate-800">
+  <section id="industries" class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Industry Focus</h2>
-        <h3 class="text-3xl font-bold text-white">Tailored Solutions for Core UAE Sectors</h3>
+        <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Industry Focus</h2>
+        <h3 class="text-3xl font-bold text-slate-900">Tailored Solutions for Core UAE Sectors</h3>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
-          <div class="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800 flex items-center justify-center text-blue-400 mb-6">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 border border-sky-200 flex items-center justify-center text-brand-blue mb-6">
             <i data-lucide="building-2" class="w-6 h-6"></i>
           </div>
-          <h4 class="text-xl font-bold text-white mb-3">Real Estate</h4>
-          <p class="text-sm text-slate-400 leading-relaxed">
+          <h4 class="text-xl font-bold text-slate-900 mb-3">Real Estate</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Automating high-volume transactions, tenant workflows, and enabling data-driven property investment and valuation platforms.
           </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
-          <div class="w-12 h-12 rounded-xl bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 mb-6">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700 mb-6">
             <i data-lucide="shopping-bag" class="w-6 h-6"></i>
           </div>
-          <h4 class="text-xl font-bold text-white mb-3">E-Commerce & Retail</h4>
-          <p class="text-sm text-slate-400 leading-relaxed">
+          <h4 class="text-xl font-bold text-slate-900 mb-3">E-Commerce & Retail</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Delivering hyper-personalized user experiences, omnichannel inventory precision, and AI-driven customer retention models.
           </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-900/40 border border-slate-800">
-          <div class="w-12 h-12 rounded-xl bg-indigo-950 border border-indigo-800 flex items-center justify-center text-indigo-400 mb-6">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 border border-sky-200 flex items-center justify-center text-brand-blue mb-6">
             <i data-lucide="truck" class="w-6 h-6"></i>
           </div>
-          <h4 class="text-xl font-bold text-white mb-3">Logistics & Supply Chain</h4>
-          <p class="text-sm text-slate-400 leading-relaxed">
+          <h4 class="text-xl font-bold text-slate-900 mb-3">Logistics & Supply Chain</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Optimizing multi-warehouse inventory levels and implementing end-to-end real-time tracking visibility across regional supply chains.
           </p>
         </div>
@@ -238,35 +240,35 @@
   </section>
 
   <!-- REGULATORY & LEGAL COMPLIANCE -->
-  <section id="compliance" class="py-16 bg-slate-900/30 border-t border-slate-800">
+  <section id="compliance" class="py-16 bg-sky-50/40 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
         <div class="flex items-center gap-3 mb-6">
-          <i data-lucide="scale" class="w-6 h-6 text-cyan-400"></i>
-          <h3 class="text-xl font-bold text-white">Regulatory & Legal Compliance Framework</h3>
+          <i data-lucide="scale" class="w-6 h-6 text-amber-600"></i>
+          <h3 class="text-xl font-bold text-slate-900">Regulatory & Legal Compliance Framework</h3>
         </div>
-        <p class="text-sm text-slate-400 mb-6">
+        <p class="text-sm text-slate-600 mb-6">
           Our digital platforms, enterprise data architectures, and commercial practices fully comply with the core legal frameworks of the United Arab Emirates:
         </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300">
-          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-700">
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0"></i>
             <span><strong>UAE PDPL:</strong> Federal Decree-Law No. 45 of 2021</span>
           </div>
-          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0"></i>
             <span><strong>Modern Tech Trading:</strong> Federal Decree-Law No. 14 of 2023</span>
           </div>
-          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0"></i>
             <span><strong>Consumer Protection:</strong> Federal Law No. 15 of 2020</span>
           </div>
-          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0"></i>
             <span><strong>Trust Services:</strong> Electronic Transactions Law</span>
           </div>
-          <div class="p-3 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+          <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue shrink-0"></i>
             <span><strong>Cybercrimes Law:</strong> Federal Decree-Law No. 34 of 2021</span>
           </div>
         </div>
@@ -275,64 +277,64 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-20">
+  <section id="contact" class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12">
         
         <div>
-          <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">Connect With Us</h2>
-          <h3 class="text-3xl font-bold text-white mb-6">Let's Discuss Your Digital Ecosystem</h3>
-          <p class="text-slate-400 mb-8 leading-relaxed">
+          <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Connect With Us</h2>
+          <h3 class="text-3xl font-bold text-slate-900 mb-6">Let's Discuss Your Digital Ecosystem</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed">
             Send us an inquiry regarding your custom software needs, automated workflow projects, or strategic AI integration inquiries.
           </p>
 
-          <div class="space-y-6 text-sm text-slate-300">
+          <div class="space-y-6 text-sm text-slate-700">
             <div class="flex items-start gap-4">
-              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+              <div class="p-3 rounded-lg bg-sky-50 border border-sky-100 text-brand-blue">
                 <i data-lucide="mail" class="w-5 h-5"></i>
               </div>
               <div>
-                <div class="font-semibold text-white">Email Us</div>
-                <a href="mailto:contact@altisdigital.ae" class="text-cyan-400 hover:underline">contact@altisdigital.ae</a>
+                <div class="font-semibold text-slate-900">Email Us</div>
+                <a href="mailto:contact@altisdigital.ae" class="text-brand-blue hover:underline">contact@altisdigital.ae</a>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-100 text-amber-700">
                 <i data-lucide="phone" class="w-5 h-5"></i>
               </div>
               <div>
-                <div class="font-semibold text-white">Call Us</div>
-                <a href="tel:+971545140395" class="text-slate-300 hover:text-white">+971 54 514 0395</a>
+                <div class="font-semibold text-slate-900">Call Us</div>
+                <a href="tel:+971545140395" class="text-slate-700 hover:text-slate-900">+971 54 514 0395</a>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+              <div class="p-3 rounded-lg bg-sky-50 border border-sky-100 text-brand-blue">
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
               <div>
-                <div class="font-semibold text-white">Registered Address</div>
-                <div class="text-slate-400">Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</div>
+                <div class="font-semibold text-slate-900">Registered Address</div>
+                <div class="text-slate-600">Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
           <form onsubmit="event.preventDefault(); alert('Thank you for your message. Our technical team will get back to you shortly.');" class="space-y-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Full Name</label>
-              <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="John Doe" />
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Full Name</label>
+              <input type="text" required class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-blue transition-colors" placeholder="John Doe" />
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address</label>
-              <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="name@company.com" />
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Email Address</label>
+              <input type="email" required class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-blue transition-colors" placeholder="name@company.com" />
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Service Focus</label>
-              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-cyan-500 transition-colors">
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Service Focus</label>
+              <select class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-700 focus:outline-none focus:border-brand-blue transition-colors">
                 <option>Custom Software / Web & Mobile</option>
                 <option>API Development & Integration</option>
                 <option>Data Engineering & BI</option>
@@ -341,10 +343,10 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Message / Requirement</label>
-              <textarea rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Tell us about your project or technical requirements..."></textarea>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Message / Requirement</label>
+              <textarea rows="4" required class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-blue transition-colors" placeholder="Tell us about your project or technical requirements..."></textarea>
             </div>
-            <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3.5 rounded-lg transition-all shadow-lg shadow-cyan-500/20">
+            <button type="submit" class="w-full bg-brand-blue hover:bg-brand-blueDark text-white font-bold py-3.5 rounded-lg transition-all shadow-md shadow-sky-600/20">
               Send Message
             </button>
           </form>
@@ -355,7 +357,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-12 text-xs text-slate-400">
+  <footer class="bg-slate-900 border-t border-slate-800 pt-16 pb-12 text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
         
@@ -364,7 +366,7 @@
             <img src="logo.jpg" alt="Altis Tech Hub Logo" class="h-8 w-auto rounded object-contain" />
             <span class="font-bold text-white text-sm">ALTIS TECH HUB</span>
           </div>
-          <p class="text-slate-500 leading-relaxed">
+          <p class="text-slate-400 leading-relaxed">
             Secure your digital assets. Automate your growth.
           </p>
         </div>
@@ -380,7 +382,7 @@
         <div>
           <h5 class="text-white font-semibold mb-3">Legal & Tax</h5>
           <p class="mb-1"><strong class="text-slate-300">VAT TRN:</strong></p>
-          <p class="mb-3 font-mono">105318634000001</p>
+          <p class="mb-3 font-mono text-amber-400">105318634000001</p>
           <p class="mb-1"><strong class="text-slate-300">Primary Region:</strong></p>
           <p>UAE & GCC Region</p>
         </div>
@@ -394,13 +396,13 @@
 
       </div>
 
-      <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
         <div>
           © 2026 Altis Tech Hub Digital Solutions FZE LLC. All Rights Reserved.
         </div>
         <div class="flex gap-6">
-          <a href="#compliance" class="hover:text-slate-400">Legal Framework</a>
-          <a href="#contact" class="hover:text-slate-400">Contact</a>
+          <a href="#compliance" class="hover:text-slate-300">Legal Framework</a>
+          <a href="#contact" class="hover:text-slate-300">Contact</a>
         </div>
       </div>
     </div>
