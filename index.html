@@ -349,7 +349,7 @@
 
         <!-- Contact Form -->
         <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Thank you for your message. Our technical team will get back to you shortly.');" class="space-y-4" >
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4" >
             <div>
               <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Full Name</label>
               <input type="text" id="name" name="name" required class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-blue transition-colors" placeholder="Your Name" />
@@ -364,7 +364,7 @@
             </div>
             <div>
               <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Service Focus</label>
-              <select class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-700 focus:outline-none focus:border-brand-blue transition-colors">
+              <select name="service_focus" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-700 focus:outline-none focus:border-brand-blue transition-colors">
                 <option>Custom Software / Web & Mobile</option>
                 <option>API Development & Integration</option>
                 <option>Data Engineering & BI</option>
@@ -462,7 +462,7 @@
 
       </div>  -->
 
-      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
+      <div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
         <div>
           © 2026 Altis Tech Hub Digital Solutions FZE LLC | All Rights Reserved | SPC Free Zone | VAT TRN: 105318634000001
         </div>
@@ -500,6 +500,40 @@
       }
     });
   </script>
-  
+
+	<script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop normal redirect
+    
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    // Send the data to Web3Forms via AJAX
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            if (response.status == 200) {
+                alert('Thank you for your message. Our technical team will get back to you shortly.');
+                form.reset(); // Clear the form fields
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert('Form submission failed.');
+        });
+});
+</script>
+
 </body>
 </html>
