@@ -110,26 +110,33 @@
 
     <!-- Hero Section with Reveal Animation hooks -->
     <header id="about" class="relative overflow-hidden pt-7 pb-7 lg:pt-7 lg:pb-7 bg-gradient-to-b from-white to-enterprise-50">
+	
+		<div class="inline-flex items-center space-x-3 ml-[185px] bg-brand-600/5 border border-brand-600/10 px-3 py-1.5 rounded-full">
+			<span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+			<span class="text-xs font-semibold text-indigo-800 tracking-wider uppercase">  Smart Automation & Advanced IT Solutions  </span>
+			<span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+		</div> 	
+				
         <div class="absolute inset-0 pointer-events-none opacity-40">
             <div class="absolute -top-40 right-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl"></div>
             <div class="absolute top-60 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
+
+        <div class="max-w-7xl mt-9 mx-auto px-20 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 ">
+			
             <!-- Left Narrative Column (Scroll Reveal) -->
             <div class="reveal lg:col-span-7 space-y-6 max-w-2xl opacity-0 translate-y-12 transition-all duration-1000 ease-out">
-                <div class="inline-flex items-center space-x-2 bg-brand-600/5 border border-brand-600/10 px-3 py-1.5 rounded-full">
-                    <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
-                    <span class="text-xs font-semibold text-indigo-800 tracking-wider uppercase">Smart Automation & Advanced IT Solutions | Secure. Resilient. Compliant.</span>
-					<span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
-				</div>
+
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-enterprise-900 tracking-tight leading-[1.1]">
-                    Secure IT Solutions for global industries.
+                    IT Solutions for global industries.
                 </h1>
                 <p class="text-lg text-slate-600 leading-relaxed">
-                    Altis Digital is an emerging UAE start-up offering secure & scalable solutions, robust API integrations and smart automation workflows required for resilient & compliant IT infrastructures.
-                </p>
+                    Altis Digital is an emerging UAE start-up offering secure & scalable solutions, robust API integrations and smart automation workflows required for resilient & compliant IT infrastructures.</p>
+				
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                </div>				
+				
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                     <a href="#solutions" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-center px-8 py-4 rounded-xl shadow-lg shadow-brand-600/20 transition-all">
                         Explore Our Solutions
@@ -142,8 +149,9 @@
 
             <!-- Right Column Grid Elements -->
             <div class="reveal lg:col-span-5 relative opacity-0 translate-y-12 transition-all duration-[1200ms] delay-200 ease-out">
-				<div class="relative mx-auto max-w-md lg:max-w-none grid grid-cols-2 gap-4 items-stretch"> <!-- Added items-stretch -->
 
+				<div class="relative mx-auto max-w-md lg:max-w-none grid grid-cols-2 gap-4 items-stretch"> <!-- Added items-stretch -->
+				
 					<!-- Card 1: Removed translate-y-4, added flex layout -->
 					<div class="bg-white p-6 rounded-2xl shadow-xl shadow-enterprise-900/5 border border-enterprise-100 flex flex-col justify-between">
 						<div>
@@ -151,10 +159,10 @@
 							<div class="h-10 w-10 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
 								<svg class="h-5 w-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
 							</div> -->
-							<div class="h-10 w-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
+							<div class="h-10 w-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
 								<i data-lucide="ShieldCheck" class="w-5 h-5 text-emerald-900"></i>
 							</div>
-							<h2 class="font-bold text-emerald-900 mb-1">Advanced Digital Integrations</h2>
+							<h2 class="font-semibold text-emerald-900 mb-1">Strategic Digital Integrations</h2>
 							<p class="text-xm text-slate-500 leading-normal">Securing and positioning businesses ahead in a fast-evolving landscape.</p>
 						</div>
 					</div>
@@ -166,11 +174,11 @@
 							<div class="h-10 w-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4">
 								<svg class="h-5 w-5 text-emerald-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
 							</div> -->
-							<div class="h-10 w-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
+							<div class="h-10 w-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
 								<i data-lucide="Combine" class="w-5 h-5 text-emerald-900"></i>
 							</div>
-							<h2 class="font-bold text-emerald-900 mb-1">Intelligent Process Automation</h2>
-							<p class="text-xm text-slate-500 leading-normal">Optimizing decision-making and execution through autonomous agentic frameworks.</p>
+							<h2 class="font-semibold text-emerald-900 mb-1">Intelligent Process Automation</h2>
+							<p class="text-xm text-slate-500 leading-normal">Optimizing decision-making and execution through agentic frameworks.</p>
 						</div>
 					</div>
                     <div class="col-span-2 bg-enterprise-900 p-6 rounded-2xl shadow-xl text-white relative overflow-hidden">
