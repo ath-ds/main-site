@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,11 +54,12 @@
 	<script src="https://unpkg.com/lucide@latest"></script>
 	
 </head>
+
 <body class="bg-enterprise-50 text-enterprise-800 antialiased font-sans">
 
     <!-- Premium Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-enterprise-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 mt-2 mb-2 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2">
 				<img src="logo-emerald.jpg" alt="AD" class="h-10 w-auto rounded object-contain" />
                 <!-- <span class="h-8 w-8 bg-brand-600 rounded-lg flex items-center justify-center shadow-md shadow-brand-600/20">
@@ -74,14 +75,14 @@
 
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#about" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors">About us</a>
-                <a href="#solutions" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors">Solutions</a>
+                <a href="#solutions" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors ">Solutions</a>
                 <a href="#services" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors">Services</a>
                 <a href="#industries" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors">Industries</a>
                 <a href="#compliance_privacy" class="text-sm font-medium text-enterprise-800 hover:text-brand-600 transition-colors">Compliance</a>
             </div>
 
             <div class="hidden lg:flex items-center">
-                <a href="#contact" class="bg-enterprise-900 hover:bg-brand-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200">
+                <a href="#contact" class="bg-enterprise-900 hover:bg-brand-600 text-white text-sm font-semibold px-5 py-2 rounded-lg shadow-sm transition-all duration-200">
                     Contact Us
                 </a>
             </div>
@@ -108,7 +109,7 @@
     </nav>
 
     <!-- Hero Section with Reveal Animation hooks -->
-    <header id="about" class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-white to-enterprise-50">
+    <header id="about" class="relative overflow-hidden pt-7 pb-7 lg:pt-7 lg:pb-7 bg-gradient-to-b from-white to-enterprise-50">
         <div class="absolute inset-0 pointer-events-none opacity-40">
             <div class="absolute -top-40 right-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl"></div>
             <div class="absolute top-60 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
@@ -130,7 +131,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                     <a href="#solutions" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-center px-8 py-4 rounded-xl shadow-lg shadow-brand-600/20 transition-all">
-                        Explore Solutions
+                        Explore Our Solutions
                     </a>
                     <a href="#services" class="border border-enterprise-800 hover:bg-enterprise-100 text-enterprise-900 font-semibold text-center px-8 py-4 rounded-xl transition-all">
                         Our Services
@@ -181,10 +182,10 @@
 	
 	<!-- ####################################### SOLUTIONS SECTION ####################################### -->
 	<section id="solutions" class="py-20 bg-white border-t border-slate-200">
-	<div class="max-w-7xl mx-auto px-6">
+	<div class="max-w-7xl mx-auto px-6 reveal duration-1000 delay-200 translate-y-12 transition-all ease-out">
 
 	<div>
-		<div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+		<div class="flex items-center gap-3 mb-5 border-b border-slate-200 pb-4">
 		  <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 ">
 			<i data-lucide="circle-chevron-right" class="w-6 h-6 text-emerald-900"></i>
 		  </div>
@@ -193,8 +194,8 @@
 		
 	  <div class="grid md:grid-cols-3 gap-8">
 	  
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
-		 <div class="flex items-center gap-4 mb-6"> 
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		 <div class="flex items-center gap-4 mb-5"> 
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="cpu" class="w-6 h-6 text-[#00008b]"></i>  <!-- Midnight Blue Exa code-->
 		  </div>
@@ -212,8 +213,8 @@
 		  </ul>
 		</div>
 
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
-		  <div class="flex items-center gap-4 mb-6">
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		  <div class="flex items-center gap-4 mb-5">
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="file-check-corner" class="w-6 h-6 text-[#00008b]"></i>
 		  </div>
@@ -231,8 +232,8 @@
 		  </ul>
 		</div>
 
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
-		  <div class="flex items-center gap-4 mb-6">
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		  <div class="flex items-center gap-4 mb-5">
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="git-branch" class="w-6 h-6 text-[#00008b]"></i>
 		  </div>
@@ -255,11 +256,11 @@
 	</section>
 	
 <!-- SERVICES SECTION -->
-  <section id="services" class="py-20 bg-brand-bg">
-    <div class="max-w-7xl mx-auto px-6">
+  <section id="services" class="py-20 bg-brand-bg" z>
+    <div class="max-w-7xl mx-auto px-6 reveal duration-1000 delay-200 translate-y-12 transition-all ease-out">
 
       <!-- Digital Services -->
-      <div class="mb-16">
+      <div class="mb-10">
 	  
         <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
           <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100">
@@ -338,7 +339,7 @@
 		  
           <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
 			<div class="flex items-center gap-3 mb-4">
-			  <i data-lucide="sparkles" class="w-8 h-8 text-[#00008b]"></i>
+			  <i data-lucide="bot" class="w-8 h-8 text-[#00008b]"></i>
 			  <h3 class="text-xl font-bold text-indigo-900">Intelligent Agent Deployment</h3>
 			</div>
             <ul class="space-y-4 text-sm text-slate-700" >
@@ -351,13 +352,13 @@
           
 		  <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
 			<div class="flex items-center gap-3 mb-4">
-			  <i data-lucide="bar-chart-3" class="w-8 h-8 text-[#00008b]"></i>
-			  <h3 class="text-xl font-bold text-indigo-900">Proactive System Resilience</h3>
+			  <i data-lucide="network" class="w-8 h-8 text-[#00008b]"></i>
+			  <h3 class="text-xl font-bold text-indigo-900">Multi-Agent AI Orchestration</h3>
 			</div>
             <ul class="space-y-4 text-sm text-slate-700" >
             <li class="flex items-start gap-3">
 			  <i data-lucide="chevron-right" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
-              <span class="text-justify text-slate-500 leading-normal">Deploying advanced machine learning models to intercept system failures and data bottlenecks before they threaten your business continuity.</span>
+              <span class="text-justify text-slate-500 leading-normal">Custom multi-agent architectures built to orchestrate advanced, non-linear enterprise workflows with precision.</span>
             </li>
            </ul>
           </div>
@@ -370,7 +371,7 @@
   <!-- TARGET INDUSTRIES -->
   <section id="industries" class="py-20 bg-white border-t border-slate-200">
     
-	<div class="max-w-7xl mx-auto px-6">
+	<div class="max-w-7xl mx-auto px-6 reveal duration-1000 delay-200 translate-y-12 transition-all ease-out">
 
 	<div>
 	
@@ -383,7 +384,7 @@
 
 		<div class="grid md:grid-cols-3 gap-8">
 
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 		  <div class="flex items-center gap-4 mb-3"> 
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="building-2" class="w-6 h-6 text-[#00008b]"></i>  <!-- Midnight Blue Exa code-->
@@ -395,7 +396,7 @@
 		  </p>
 		</div>
 
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 		  <div class="flex items-center gap-4 mb-3"> 
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="shopping-bag" class="w-6 h-6 text-[#00008b]"></i>  <!-- Midnight Blue Exa code-->
@@ -407,7 +408,7 @@
 		  </p>
 		</div>
 
-		<div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+		<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 		  <div class="flex items-center gap-4 mb-3"> 
 		  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 			<i data-lucide="truck" class="w-6 h-6 text-[#00008b]"></i>  <!-- Midnight Blue Exa code-->
@@ -429,7 +430,7 @@
 	
       <div class="grid md:grid-cols-3 gap-8">
 	  
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 			<div class="flex items-center gap-4 mb-3"> 
 				<div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 					<i data-lucide="heart-pulse" class="w-6 h-6 text-[#00008b]"></i>  
@@ -441,7 +442,7 @@
 			</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 			<div class="flex items-center gap-4 mb-3"> 
 				<div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 					<i data-lucide="graduation-cap" class="w-6 h-6 text-[#00008b]"></i>  
@@ -453,7 +454,7 @@
 			</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-sm transition-all">
 			<div class="flex items-center gap-4 mb-3"> 
 				<div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-blue shrink-0">
 					<i data-lucide="ticket" class="w-6 h-6 text-[#00008b]"></i>  
